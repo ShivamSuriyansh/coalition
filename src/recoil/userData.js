@@ -11,6 +11,11 @@ export const userId = atom({
     default : ''
 })
 
+export const singleUserDate = atom({
+    key:"singleUserData",
+    default : []
+})
+
 export const avgBP = atom({
     key: 'avgSys',
     default:{}
