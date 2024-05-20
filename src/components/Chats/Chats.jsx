@@ -86,7 +86,7 @@ const Chats = () => {
             </div>
         </div>
 
-        <div className='w-full bg-slate-50 mt-[32px] px-5 py-5 rounded-2xl h-fit'>
+        <div className='w-full bg-slate-50 mt-[32px] px-5 py-5 rounded-2xl h-full'>
             <PatientSideBar />
         </div>
     </div>

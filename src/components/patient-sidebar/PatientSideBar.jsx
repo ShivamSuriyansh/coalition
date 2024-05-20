@@ -54,8 +54,8 @@ const PatientSideBar = () => {
                 </div>
             </div>
         </div>
-        <div className=' button flex justify-center items-center mt-10'>
-            <div className='bg-[#01F0D0] rounded-full h-[3rem] w-full px-4 py-2 flex justify-center hover:bg-[#11D0D0]'>
+        <div className=' button flex justify-center items-center mt-10 '>
+            <div className='bg-[#01F0D0] rounded-full h-[3rem] m-auto w-full px-4 py-2 flex justify-center hover:bg-[#11D0D0] cursor-pointer'>
                 <button>
                     Show All Notifications
                 </button>
