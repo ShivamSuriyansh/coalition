@@ -17,7 +17,7 @@ const Bloodpressure =({id}) => {
     const avgBp = useRecoilValue(avgBP);
 
   return (
-    <div className=" bg-[#F4F0FE] w-full px-5 py-4 rounded-2xl h-[20rem] flex gap-10">
+    <div className=" bg-[#F4F0FE] w-fit px-5 py-4 rounded-2xl h-[20rem] flex gap-10">
         <div className=" chart flex flex-col gap-2 w-[30rem]">
             <div className="flex justify-between items-center">
                 <div className="BP">
@@ -31,7 +31,7 @@ const Bloodpressure =({id}) => {
                 {allChat.length > 1 && <Linechart id={id}/>}
             </div>
         </div>
-        <div className="report flex flex-col gap-3 w-full">
+        {id && <div className="report flex flex-col gap-3 w-[15rem]">
             <div className="systolic flex flex-col gap-2 border-b-2 border-slate-300">
                 <div className="flex justify-start items-center gap-1 ">
                     <div class="w-3 h-3  bg-[#E66FD2] rounded-full"></div>
@@ -48,7 +48,7 @@ const Bloodpressure =({id}) => {
             <div className="systolic flex flex-col gap-2 ">
                 <div className="flex justify-start items-center gap-1 ">
                     <div class="w-3 h-3  bg-[#01F0D0] rounded-full"></div>
-                    <div className="text-md font-semibold text-slate-700">Systolic</div>
+                    <div className="text-md font-semibold text-slate-700">Diastolic</div>
                 </div>
                 <div className=" text-2xl font-semibold">{ avgBp.avgDis}</div>
                 <div className=" flex justify-start items-center gap-3">
@@ -58,7 +58,7 @@ const Bloodpressure =({id}) => {
                     <span>{` ${avgBp.avgDis <= 88 ? ' Lower than Average' : ' Higher than average'}`}</span>
                 </div>
             </div>
-        </div>
+        </div>}
     </div>
   )
 }

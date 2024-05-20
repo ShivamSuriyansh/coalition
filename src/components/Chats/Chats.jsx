@@ -5,7 +5,9 @@ import { useRecoilState } from 'recoil';
 import { userData } from '../../recoil/userData';
 import { userId } from '../../recoil/userData.js'
 import Bloodpressure from '../Diagnosis/Bloodpressure';
+import FlashCard from '../FlashCard.jsx';
 import respiratory from '../../assets/respiratory rate.svg'
+
 
 const Chats = () => {
 
@@ -45,9 +47,9 @@ const Chats = () => {
         }
 
   return (
-    <div className=' flex justify-between gap-5'>
+    <div className=' flex justify-between gap-5' style={{ scrollbarWidth: 'none'}}>
 
-        <div className=' w-[20rem] bg-slate-50 mt-[32px] p-2 rounded-2xl'>
+        <div className=' w-[18.5rem] bg-slate-50 mt-[32px] p-1 rounded-2xl'>
             
             <div className=' patients search flex justify-between items-center'>
                 <span>Patients</span>
@@ -66,18 +68,13 @@ const Chats = () => {
             </div>
         
         </div>
-        <div className='w-[60rem] bg-slate-50 mt-[32px] px-10 py-5 rounded-2xl h-fit'>
+        <div className='w-fit bg-slate-50 mt-[32px] px-10 py-5 rounded-2xl h-fit'>
             <span className='text-2xl font-semibold mb-7 block'>Diagnosis History</span>
             <Bloodpressure id={id} />
-            <div className=' mt-3'>
-                <div className='respiratory-rate h-[12rem] w-[12rem] rounded-xl bg-[#E0F3FA]'>
-                    <div className=' rounded-full p-4 h-[7rem] w-[6rem] flex flex-col gap-2'>
-                        <img src={respiratory} alt="" />
-                        <div className=' text-xs ' >Respiratory Rate</div>
-                    </div>
-                </div>
-                <div className='temperature'></div>
-                <div className='heart-rate'></div>
+            <div className='flex gap-5'>
+                <FlashCard image={respiratory} text={'Respiratory Rate'} bg={'#E0F3FA'} />
+                <FlashCard image={respiratory} text={'Blood Pressure'} bg={'#927eed'}/>
+                <FlashCard image={respiratory} text={'Heart Rate'} bg={'#ed7e8b'}/>
             </div>
         </div>
     </div>

@@ -34,8 +34,8 @@ const Linechart = ({id}) => {
 
                 setSystolicBP(systolic);
                 setDiastolicBP(diastolic);
-                const avgSys = parseInt(systolicBP.slice(0,6).reduce((acc,curr)=>acc+curr,0) / 6)
-                const avgdis = parseInt(diastolicBP.slice(0,6).reduce((acc,curr)=> acc+ curr,0) / 6)
+                const avgSys = parseInt(systolic.slice(0,6).reduce((acc,curr)=>acc+curr,0) / 6)
+                const avgdis = parseInt(diastolic.slice(0,6).reduce((acc,curr)=> acc+ curr,0) / 6)
                 setAvgSystolic({
                     avgSys:avgSys,
                     avgDis:avgdis

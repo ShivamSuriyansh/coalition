@@ -7,7 +7,7 @@ import Header from './components/Header'
 function App() {
 
   return (
-    <div className=' px-3 py-6 bg-slate-200 h-screen w-full'>  
+    <div className=' px-3 py-6 bg-slate-200 h-fit w-full m-auto'>  
       <Header />
       <div className=' flex justify-between gap-20'>
         <RecoilRoot>
